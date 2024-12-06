@@ -1,4 +1,9 @@
 class Processing():
+
+    riku = 10
+    nao = 20
+    haruki = 30
+
     def __init__(self, a, b):
         self.num1 = a
         self.num2 = b
@@ -22,6 +27,11 @@ class Processing():
     def run(self):
         return self.__secret()
     
+    @classmethod
+    def class_method(cls):
+        return cls.riku + cls.nao + cls.haruki
+    
+print("class_method example", Processing.class_method())
 
 test1 = Processing(10, 5)
 
